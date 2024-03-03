@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: "row";
+    justify-content: flex-end;
+    background-color: #ec6a6d;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    list-style-type: none;
+    color: white;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    margin-right: 15px;
+}
+
+li:hover {
+    color: #49c2dd;
+    cursor: pointer;
+}

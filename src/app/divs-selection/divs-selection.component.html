@@ -1,0 +1,52 @@
+<h2>Affichage sélectif</h2>
+<div class="container-div">
+  <div class="first-div" *ngIf="selectedOption == 'A'">
+    <h1>A</h1>
+  </div>
+  <div class="second-div" *ngIf="selectedOption == 'B'">
+    <h1>B</h1>
+  </div>
+</div>
+<br />
+
+<div class="options-div">
+  <div class="option-type">
+    <h4>Par select</h4>
+    <select [(ngModel)]="selectedOption">
+      <option value="A">Afficher A</option>
+      <option value="B">Afficher B</option>
+    </select>
+  </div>
+
+  <div class="option-type">
+    <h4>Par boutons radios</h4>
+    <div class="radios-button-div">
+      <input
+        type="radio"
+        name="options"
+        value="A"
+        [(ngModel)]="selectedOption"
+      />Afficher A
+      <input
+        type="radio"
+        name="options"
+        value="B"
+        [(ngModel)]="selectedOption"
+      />Afficher B
+    </div>
+  </div>
+</div>
+
+<h2>Affichage par checkbox</h2>
+
+<div class="option-type">
+  <div class="sentences-div">
+    <div *ngIf="montrerPhrase1">Je fais du Dotnet</div>
+    <div *ngIf="montrerPhrase2">Je fais du Angular</div>
+  </div>
+
+  <div class="check-boxes-div">
+    <input type="checkbox" [(ngModel)]="montrerPhrase1" /> Phrase 1
+    <input type="checkbox" [(ngModel)]="montrerPhrase2" /> Phrase 2
+  </div>
+</div>

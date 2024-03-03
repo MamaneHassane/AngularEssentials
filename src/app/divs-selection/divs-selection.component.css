@@ -1,0 +1,53 @@
+.container-div {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: flex-start;
+    gap : 5px;
+}
+
+.first-div, .second-div {
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-div {
+    background-color:  red;
+}
+
+.second-div {
+    background-color: blue;
+}
+
+.options-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.option-type {
+    display: flex;
+    flex-direction: column;
+    column-gap: 2px;
+    margin-right: 20px;
+}
+
+.radios-button-div {
+    display: flex;
+    flex-direction: row;
+    row-gap: 1px;
+}
+
+.sentences-div {
+    display: flex;
+    flex-direction: column;
+    column-gap: 5px;
+}
+
+.check-boxes-div {
+    display: flex;
+    flex-direction: row;
+}
