@@ -3,9 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { DivsSelectionComponent } from './divs-selection/divs-selection.component';
 import { NgIf} from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { CustomNavbarComponent } from './custom-navbar/custom-navbar.component';
+import { CustomSidebarComponent } from './custom-sidebar/custom-sidebar.component';
 import { HomeComponent } from './home/home.component';
-
 
 @Component({
   selector: 'app-root',
@@ -13,7 +12,7 @@ import { HomeComponent } from './home/home.component';
   imports: [
     RouterOutlet,
     DivsSelectionComponent,
-    CustomNavbarComponent,
+    CustomSidebarComponent,
     HomeComponent,
     FormsModule,
     NgIf,
@@ -22,5 +21,5 @@ import { HomeComponent } from './home/home.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'training';
+  title = `Angular Moderne entrainement`;
 }

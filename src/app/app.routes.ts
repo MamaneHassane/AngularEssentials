@@ -17,15 +17,15 @@ export const routes: Routes = [
         pathMatch : "full"
     },
     {
-        path: "home",
+        path: 'home',
         component : HomeComponent
     },
     {
-        path:"divsselection",
+        path:'divsselection',
         component: DivsSelectionComponent
     },
     {
-        path:"browse",
+        path:'browse',
         component: BrowseItemsComponent
     }
 ];
