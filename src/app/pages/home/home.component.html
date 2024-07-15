@@ -1,21 +1,22 @@
-<h1>Welcome to this awesome Angular application</h1>
-
-<p>This project have three purposes : </p>
-  <ul>
-    <li>
-      Allow me to practice Angular
-    </li>
-    <li>
-      Show my Angular skills for recruiters
-    </li>
-    <li>
-      And maybe help you learn if you are here for that
-    </li>
-
+<h1 [className]="'text-4xl'">Welcome to this awesome Angular application</h1>
+<br/>
+<p [className]="'text-2xl'">This project have three purposes : </p>
+  <ul [className]="'list-disc'">
+    <div [className]="'mr-12'">
+      <li [className]="'p-2'">
+        Allow me to practice Angular
+      </li>
+      <li [className]="'p-2'">
+        Show my Angular skills for recruiters
+      </li>
+      <li [className]="'p-2'">
+        And maybe help you learn if you are here for that
+      </li>
+    </div>
   </ul>
 
-<h3>Click on the photo to see my Linked in profile</h3>
-
-<h2>Try clicking on some links under the dashboard section of the sidebar to see the examples</h2>
-
-<h1>I hope you enjoy !! </h1>
+<h3 [className]="'text-2xl'">Click on the photo to see my Linked in profile</h3>
+<br/>
+<h2 [className]="'text-xl'">Try clicking on some links under the dashboard section of the sidebar to see the examples</h2>
+<br/>
+<h1 [className]="'text-3xl'">I hope you enjoy !! </h1>
