@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LazyComponentComponent } from './lazy-component.component';
+import { ItemCardComponent } from './item-card.component';
 
-describe('LazyComponentComponent', () => {
-  let component: LazyComponentComponent;
-  let fixture: ComponentFixture<LazyComponentComponent>;
+describe('ItemCardComponent', () => {
+  let component: ItemCardComponent;
+  let fixture: ComponentFixture<ItemCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LazyComponentComponent]
+      imports: [ItemCardComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(LazyComponentComponent);
+    fixture = TestBed.createComponent(ItemCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

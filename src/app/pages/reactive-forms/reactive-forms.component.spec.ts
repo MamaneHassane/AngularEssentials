@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CustomSidebarComponent } from './custom-sidebar.component';
+import { ReactiveFormsComponent } from './reactive-forms.component';
 
-describe('CustomNavbarComponent', () => {
-  let component: CustomSidebarComponent;
-  let fixture: ComponentFixture<CustomSidebarComponent>;
+describe('ReactiveFormsComponent', () => {
+  let component: ReactiveFormsComponent;
+  let fixture: ComponentFixture<ReactiveFormsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CustomSidebarComponent]
+      imports: [ReactiveFormsComponent]
     })
     .compileComponents();
-
-    fixture = TestBed.createComponent(CustomSidebarComponent);
+    
+    fixture = TestBed.createComponent(ReactiveFormsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
