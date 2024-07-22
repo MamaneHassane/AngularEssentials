@@ -1,4 +1,4 @@
-import { NgIf } from '@angular/common';
+import {NgClass, NgIf} from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -7,7 +7,8 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [
     FormsModule,
-    NgIf
+    NgIf,
+    NgClass
   ],
   templateUrl: './divs-selection.component.html',
   styleUrl: './divs-selection.component.css'

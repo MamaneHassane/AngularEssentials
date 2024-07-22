@@ -1,19 +1,22 @@
-<nz-card style="width:180px;" [nzCover]="coverTemplate" [nzActions]="[actionEdit, actionEllipsis]">
-  <nz-card-meta
-    nzTitle= "{{this.title$}}"
-    nzDescription=  "{{this.description$}}"
-    [nzAvatar]="avatarTemplate"
-  ></nz-card-meta>
-</nz-card>
-<ng-template #avatarTemplate>
-  <nz-avatar nzSrc="{{this.avatarImageUrl$}}"></nz-avatar>
-</ng-template>
-<ng-template #coverTemplate>
-  <img alt="example" src="{{this.itemImageUrl$}}" />
-</ng-template>
-<ng-template #actionEdit>
-  <span nz-icon nzType="edit" nzTheme="twotone" [nzTwotoneColor]="'#2fc5eb'"></span>
-</ng-template>
-<ng-template #actionEllipsis>
-  <span nz-icon nzType="delete" nzTheme="twotone" [nzTwotoneColor]="'#eb2f8d'"></span>
-</ng-template>
+<div [ngClass]="'item-card'">
+  <div [ngClass]="'img-div'">
+    <img [ngClass]="'img'" src="{{itemImageUrl$}}" alt="">
+  </div>
+  <div [ngClass]="'title-description-grade'">
+    <span [ngClass]="'title'">{{title$}}</span>
+    <div [ngClass]="'description-grade'">
+      <span [ngClass]="'description'">{{description$}}</span>
+      <span [ngClass]="'grade'">{{grade}}</span>
+    </div>
+  </div>
+  <div [ngClass]="'buttons'">
+    <div [ngClass]="'update-button'">
+      <span [ngClass]="'pi pi-file-edit'"></span>
+    </div>
+    <div [ngClass]="'delete-button'">
+      <span [ngClass]="'pi pi-trash'"></span>
+    </div>
+  </div>
+</div>
+
+

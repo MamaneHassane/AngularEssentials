@@ -6,6 +6,12 @@
     gap : 5px;
 }
 
+.two-sides {
+  display: flex;
+  flex-direction: row;
+  gap : 20px;
+}
+
 .first-div, .second-div {
     display: flex;
     flex-direction: row;
@@ -50,4 +56,20 @@
 .check-boxes-div {
     display: flex;
     flex-direction: row;
+}
+
+.img-div {
+  display: flex;
+  width: 200px;
+  height: 200px;
+}
+
+.checkbox-side {
+  padding: 10px;
+  border: 1px solid aqua;
+}
+
+.select-and-radio-side {
+  padding: 10px;
+  border: 1px solid palevioletred;
 }

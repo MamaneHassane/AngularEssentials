@@ -1,52 +1,64 @@
-<h2>Affichage sélectif</h2>
-<div class="container-div">
-  <div class="first-div" *ngIf="selectedOption == 'A'">
-    <h1>A</h1>
-  </div>
-  <div class="second-div" *ngIf="selectedOption == 'B'">
-    <h1>B</h1>
-  </div>
-</div>
-<br />
+<h1>Selective display</h1>
 
-<div class="options-div">
-  <div class="option-type">
-    <h4>Par select</h4>
-    <select [(ngModel)]="selectedOption">
-      <option value="A">Afficher A</option>
-      <option value="B">Afficher B</option>
-    </select>
-  </div>
+<h2>The template driven forms concept is that we can use values binded by ng-model directive to act on what we display</h2>
 
-  <div class="option-type">
-    <h4>Par boutons radios</h4>
-    <div class="radios-button-div">
-      <input
-        type="radio"
-        name="options"
-        value="A"
-        [(ngModel)]="selectedOption"
-      />Afficher A
-      <input
-        type="radio"
-        name="options"
-        value="B"
-        [(ngModel)]="selectedOption"
-      />Afficher B
+<div [ngClass]="'two-sides'">
+  <div [ngClass]="'select-and-radio-side'">
+    <p>Here is the value that determines what is show for the two divs : <B>{{this.selectedOption}}</B></p>
+    <h2>Using a select</h2>
+    <div class="options-div">
+      <div class="option-type">
+        <select [(ngModel)]="selectedOption">
+          <option value="A">Show A</option>
+          <option value="B">Show B</option>
+        </select>
+      </div>
+    </div>
+    <div class="options-div">
+      <div class="option-type">
+        <h2>Using radio buttons</h2>
+        <div class="radios-button-div">
+          <input
+            type="radio"
+            name="options"
+            value="A"
+            [(ngModel)]="selectedOption"
+          />Show A
+          &nbsp; &nbsp;
+          <input
+            type="radio"
+            name="options"
+            value="B"
+            [(ngModel)]="selectedOption"
+          />Show B
+        </div>
+      </div>
+    </div>
+    <div class="container-div">
+      <div class="first-div" *ngIf="selectedOption == 'A'">
+        <h1>A</h1>
+      </div>
+      <div class="second-div" *ngIf="selectedOption == 'B'">
+        <h1>B</h1>
+      </div>
     </div>
   </div>
+  <br/>
+  <div [ngClass]="'checkbox-side'">
+    <p>Here is the value that determines if first sentence is shown : <B>{{this.montrerPhrase1}}</B></p>
+    <p>Here is the value that determines if second sentence is shown : <B>{{this.montrerPhrase2}}</B></p><div class="option-type">
+    <h2>Using checkboxes</h2>
+    <div class="sentences-div">
+      <h3 *ngIf="montrerPhrase1">I do Dotnet</h3>
+      <br/>
+      <h3 *ngIf="montrerPhrase2">I do Angular</h3>
+    </div>
+    <div class="check-boxes-div">
+      <input type="checkbox" [(ngModel)]="montrerPhrase1" /> Sentence 1
+      <input type="checkbox" [(ngModel)]="montrerPhrase2" /> Sentence 2
+    </div>
+  </div>
+  </div>
 </div>
 
-<h2>Affichage par checkbox</h2>
 
-<div class="option-type">
-  <div class="sentences-div">
-    <div *ngIf="montrerPhrase1">Je fais du Dotnet</div>
-    <div *ngIf="montrerPhrase2">Je fais du Angular</div>
-  </div>
-
-  <div class="check-boxes-div">
-    <input type="checkbox" [(ngModel)]="montrerPhrase1" /> Phrase 1
-    <input type="checkbox" [(ngModel)]="montrerPhrase2" /> Phrase 2
-  </div>
-</div>
